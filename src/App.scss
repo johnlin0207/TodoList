@@ -1,0 +1,32 @@
+html{
+  background: #d2e2ff;
+}
+.container {
+  width: 50%;
+  height: 100%;
+  margin: 200px auto;
+  text-align: center;
+}
+
+.container ul{
+  width:40%;
+  margin: auto;
+}
+
+.container ul li {
+  text-align: left;
+}
+
+.addtodo input{
+  border: 1px solid #cccccc;
+  height: 25px;
+  border-radius: 3px;
+}
+
+.addtodo button{
+  height:25px;
+  margin-left: 5px;
+}
+.footer{
+  margin-top: 20PX;
+}
