@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import '../App.scss';
 import {addTodo, completeTodo, setVisibility} from '../action/index';
 import AddToDo from '../components/addtodo';
 import ToDOList from '../components/todolist';
@@ -59,7 +58,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const mapStateToProps = (state) => {
-    console.log(state);
+    //console.log(state);
     return {
         todoList: visifilter(state.visibilityFilter, state.todo), //todoList:[{todo:[],complete:Boolean},{}]
         filter: state.visibilityFilter //filter:"SHOW_XXX"

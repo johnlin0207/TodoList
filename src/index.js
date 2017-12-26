@@ -1,18 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
+import {createLogger} from 'redux-logger';
 import combineRe from './reducer'
-import './index.css';
-import App from './containers/App';
+import './index';
+import './App';
+import WebRouter from './router'
 import registerServiceWorker from './registerServiceWorker';
 
 // 创建store并绑定reducer
-const store = createStore(combineRe);
+let store = createStore(combineRe);
+
+if (process.env.NODE_ENV === 'development') {
+    const logger = createLogger();
+    store = createStore(combineRe, applyMiddleware(logger))
+}
 
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <WebRouter/>
     </Provider>,
 
     document.getElementById('root'));
