@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9eafaed6-646c-4e36-88dc-e93a90fd53b8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="9eafaed6-646c-4e36-88dc-e93a90fd53b8" name="Default" comment="Edited README and config gitignore file">
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/www" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/routes/users.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/error.pug" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/index.pug" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/layout.pug" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
       <change beforePath="$PROJECT_DIR$/webpack.build.js" afterPath="$PROJECT_DIR$/webpack.build.js" />
       <change beforePath="$PROJECT_DIR$/webpack.dev.js" afterPath="$PROJECT_DIR$/webpack.dev.js" />
     </list>
@@ -346,7 +349,7 @@
       <workItem from="1514168094578" duration="7854000" />
       <workItem from="1514250664453" duration="6236000" />
       <workItem from="1514256999439" duration="156000" />
-      <workItem from="1514257224534" duration="544000" />
+      <workItem from="1514257224534" duration="962000" />
     </task>
     <task id="LOCAL-00001" summary="Added react-router &amp; node server">
       <created>1514256180558</created>
@@ -355,11 +358,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514256180558</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Edited README and config gitignore file">
+      <created>1514257848696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1514257848696</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95828000" />
+    <option name="totallyTimeSpent" value="96246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -399,7 +409,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added react-router &amp; node server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added react-router &amp; node server" />
+    <MESSAGE value="Edited README and config gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited README and config gitignore file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
