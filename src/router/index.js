@@ -22,7 +22,6 @@ class WebRouter extends React.Component {
                 </div>
             </Router>
         )
-
     }
 }
 export default WebRouter
