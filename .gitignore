@@ -2,7 +2,7 @@
 dist
 
 #webstorm config file
-.idea
+.idea/
 
 #package-lock.json
 package-lock.json
