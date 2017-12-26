@@ -26,6 +26,15 @@ const config = {
             {
                 test: [/\.scss$/, /\.css$/],
                 use:extract1.extract(['css-loader','sass-loader']) // use style-loader in development
+            },
+            {
+                test:[/\.(png|jpg|svg)$/],
+                exclude:/^node_modules$/,
+                use:{
+                    loader:'url-loader?limit=8192&name=images/[hash:8].[name].[ext]',//if size smaller than 1024Bytes
+                    // gonna be encoding to base64(daraURL)，小于规定limit大小的文件将会进行base64编码并内联到代码中，以减少
+                    // http请求，若图片大于limit大小会被作为图片文件放进/images中
+                }
             }
         ]
     },

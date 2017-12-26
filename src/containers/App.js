@@ -14,6 +14,7 @@ class App extends Component {
                 <AddToDo onAddClick={onAddClick}/>
                 <ToDOList todoList={todoList} onTodoClick={onTodoClick}/>
                 <Footer filter={filter} onFilterSelect={onFilterSelect}/>
+                <img src={require("../logo.svg")} alt="logo"/>
             </div>
         );
     }
