@@ -2,16 +2,20 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom'
 import Login from '../containers/Login'
 import App from '../containers/App';
+import NoMatch from '../components/NoMatch'
 
 class WebRouter extends React.Component {
+
 
     render() {
         return (
             <Router>
                 <Switch>
-                    <Route path='/' exact={true} render={()=>(<div><h1>Welcome</h1><a href="/login">Sign in</a></div>)}/>
-                    <Route  path='/login' component={Login}/>
+                    <Route path='/' exact={true}
+                           render={() => (<div><h1>Welcome</h1><a href="/login">Sign in</a></div>)}/>
+                    <Route path='/login' component={Login}/>
                     <PrivateRoute path='/app' component={App}/>
+                    <Route component={NoMatch}/>
                 </Switch>
             </Router>
         )
@@ -23,7 +27,7 @@ class WebRouter extends React.Component {
 // 该函数返回一个Route组件
 const PrivateRoute = ({component: Component, ...rest}) => (
 
-    <Route {...rest} render={props => Number(localStorage.getItem('status'))  ? (
+    <Route {...rest} render={props => Number(localStorage.getItem('status')) ? (
         <Component {...props}/>
     ) : (
         <Redirect to={{pathname: '/login', state: {from: props.location}}}/>)}
