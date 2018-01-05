@@ -14,7 +14,7 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './js/[name]_[chunkhash:8].js'
+        filename: './js/[name]_[hash:8].js'
     },
     module: {
         rules: [

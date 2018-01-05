@@ -1,20 +1,35 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {addTodo, completeTodo, setVisibility} from '../action/index';
+import {addTodo, completeTodo, setVisibility} from '../action';
 import AddToDo from '../components/addtodo';
 import ToDOList from '../components/todolist';
-import Footer from '../components/footer'
+import Footer from '../components/footer';
+import img from '../logo.svg';
+import Auth from '../auth'
 
 class App extends Component {
+
+    static handleLogout(e){
+
+        Auth.loginOut()
+    }
+
     render() {
         const {todoList, filter, onAddClick, onTodoClick, onFilterSelect} = this.props;
         return (
-            <div className='container'>
-                <AddToDo onAddClick={onAddClick}/>
-                <ToDOList todoList={todoList} onTodoClick={onTodoClick}/>
-                <Footer filter={filter} onFilterSelect={onFilterSelect}/>
-                <img src={require("../logo.svg")} alt="logo"/>
+            <div>
+                <header>
+                    <h2 style={{display:'inline-block'}}>Welcome back! {localStorage.getItem('username')}</h2>
+                    <span style={{position:'absolute',right:'20px',top:'20px'}}><a href="/login" onClick={(event)=>App.handleLogout(event)}>Login out</a></span>
+                </header>
+                <div className='container'>
+                    <AddToDo onAddClick={onAddClick}/>
+                    <ToDOList todoList={todoList} onTodoClick={onTodoClick}/>
+                    <Footer filter={filter} onFilterSelect={onFilterSelect}/>
+                    <img src={img} alt="logo"/>
+                </div>
+
             </div>
         );
     }

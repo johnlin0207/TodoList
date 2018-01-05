@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('myapp:server');
 var http = require('http');
+let childProcess = require('child_process');
 
 /**
  * Get port from environment and store in Express.
@@ -86,5 +87,6 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  console.log('Listening on ' + bind);
+  console.log('Rear Server is Listening on ' + bind);
+    //childProcess.exec(`start http://localhost:3000`)
 }

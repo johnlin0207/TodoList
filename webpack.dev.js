@@ -25,6 +25,13 @@ const config = {
                     }, {
                         loader: 'sass-loader'
                     }]
+            },
+            {
+                test:[/\.(png|jpg|svg)$/],
+                exclude:/^node_modules$/,
+                use:{
+                    loader:'url-loader?limit=8192',
+                }
             }
         ]
     },

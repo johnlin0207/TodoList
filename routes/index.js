@@ -1,10 +1,18 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let app = express();
+let path = require('path');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+app.get('*', function (req, res, next) {
     //res.render('index', { title: 'Express' });
-    res.send('index.html');
+
+    //res.sendFile(path.resolve(__dirname,'../dist/index.html'));
 });
 
-module.exports = router;
+app.post('/login', function (req, res, next) {
+    //res.render('index', { title: 'Express' });
+    console.log(req.body);
+    res.send(true);
+
+});
+module.exports = app;

@@ -27,3 +27,32 @@ export const setVisibility = filter => {
         filter
     }
 };
+
+const userInfo = (userData) => ({
+
+    type: 'USER_INFO',
+    userData
+});
+
+export const fetchUserInfo = (user) => (dispatch) => {
+    return fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+
+    }).then(response => response.json())
+        .then(response => {
+            if (response) {
+                dispatch(userInfo(response))
+            }
+        })
+        .catch((error) => {
+            dispatch(userInfo({
+                data: null,
+                status: false,
+                username: null
+            }))
+        });
+};

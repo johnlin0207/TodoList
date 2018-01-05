@@ -29,5 +29,14 @@ const visibilityFilter = (state = SHOW_TYPE.SHOW_ALL, action) => {
     }
 };
 
-const combineRe = combineReducers({todo, visibilityFilter});
+const userInfo = (state = [], action) => {
+    switch (action.type) {
+        case 'USER_INFO':
+            return action.userData;
+        default:
+            return state
+    }
+};
+
+const combineRe = combineReducers({todo, visibilityFilter,userInfo});
 export default combineRe;
